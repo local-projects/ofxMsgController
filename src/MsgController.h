@@ -10,8 +10,6 @@
 #include "ofxHeartbeat.h"
 #include "ofxOscReceiver.h"
 
-#define APP_ID "CONVERSATION_BOOTH"
-
 class MsgController {
   public:
     MsgController();
@@ -30,6 +28,9 @@ class MsgController {
     string        serializeAnalytics( string content_id );
     static string getParsedAddress( string full );
 
+    //! setters
+    void setAppId( string id ) { appId = id; }
+
   private:
     unique_ptr<ofxOscSender>   sender;
     unique_ptr<ofxOscReceiver> receiver;
@@ -41,6 +42,7 @@ class MsgController {
     string mAnalytics{ "/analytics" };
     string mRestart{ "/restart" };
     string mHbMsg{};
+    string appId{ "APP" };
     bool   mUseHb{ false };
     bool   mUseSender{ false };
 

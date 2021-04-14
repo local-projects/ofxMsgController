@@ -35,7 +35,7 @@ void MsgController::setup( const bool use_hb, string heartbeat_ip, int heartbeat
     mUseHb = use_hb;
     if( mUseHb ) {
         //! setup heartbeat
-        hb.setup( heartbeat_ip, APP_ID, heartbeat_port );
+        hb.setup( heartbeat_ip, appId, heartbeat_port );
         hb.start();
         hb.resetCountdown();
     }
