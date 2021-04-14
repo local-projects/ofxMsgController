@@ -6,14 +6,11 @@
 //
 
 #pragma once
-#include "RBData.h"
 #include "ofMain.h"
 #include "ofxHeartbeat.h"
 #include "ofxOscReceiver.h"
 
 #define APP_ID "CONVERSATION_BOOTH"
-
-using namespace FLDC;
 
 class MsgController {
   public:
